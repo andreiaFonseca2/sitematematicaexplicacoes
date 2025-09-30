@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>10º Ano - Matemática</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📘 Recursos — 10º Ano</h1>
+    <p>Escolhe o tema, depois o tópico, e acede a fichas ou testes.</p>
+  </header>
+
+  <!-- ====== Temas ====== -->
+  <main id="subjects">
+    <section class="materia borda azulClaro" data-subject="Modelos matemáticos para a cidadania">
+      <h2>📊 Modelos matemáticos para a cidadania</h2>
+    </section>
+
+    <section class="materia borda verdeClaro" data-subject="Estatística">
+      <h2>📐 Estatística</h2>
+    </section>
+
+    <section class="materia borda roxoClaro" data-subject="Geometria sintética no plano">
+      <h2>➗ Geometria sintética no plano</h2>
+    </section>
+
+    <section class="materia borda laranjaClaro" data-subject="Funções">
+      <h2>📈 Funções</h2>
+    </section>
+
+    <section class="materia borda rosaClaro" data-subject="Geometria analítica no plano e no espaço">
+      <h2>📐 Geometria analítica no plano e no espaço</h2>
+    </section>
+  </main>
+
+  <!-- ====== Modal ====== -->
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <header>
+        <div class="head">
+          <button class="btn" id="btnBack">⬅</button>
+          <h2 id="modalTitle">Tema</h2>
+          <button class="close" id="btnClose">✕</button>
+        </div>
+        <div class="crumbs" id="crumbs"></div>
+        <div class="desc" id="modalDesc"></div>
+      </header>
+      <div class="content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <a class="botao" href="index.html">⬅ Voltar ao início</a>
+  </footer>
+
+  <script>
+    const DATA = {
+      "Modelos matemáticos para a cidadania": {
+        descricao: "Explora os modelos matemáticos aplicados a diferentes contextos.",
+        subtopicos: {
+          "Modelos matemáticos nas eleições": { fichas: [
+            { nome: "Ficha 1 - Sistemas Maioritários - Maioria Simples e Maioria Absoluta", url: "fichas/MatematicaNasEleicoes/SistemasMaioritarios.pdf" },
+           { nome: "Ficha 2 - Metodo de Borda", url: "fichas/MatematicaNasEleicoes/MetodoBorda.pdf" },
+            { nome: "Ficha Geral", url: "fichas/MatematicaNasEleicoes/ModelosMatemáticosNasEleições.pdf" }
+       
+    ],
+    
+    solucoes: [ 
+         { nome: "Solução - Ficha 1", url: "fichas/MatematicaNasEleicoes/SistemasMaioritariosSolucao.pdf" },
+    ] },
+          "Modelos matemáticos na partilha": { fichas: [
+            { nome: "Ficha 1 - Metodo de Hondt", url: "fichas/MetodoHondt.pdf" },
+            { nome: "Ficha 2 - Metodo de Método de St. Laguë", url: "fichas/MatematicaNasEleicoes/MétododeSt.Laguex.pdf" },
+            { nome: "Ficha 3 - Modelos matemáticos na partilha - geral", url: "fichas/MatematicaNasEleicoes/ModelosMatematicosNaPartilha.pdf" },
+
+          ], testes: [] },
+          "Modelos matemáticos em finanças": { fichas: [
+            { nome: "Ficha 1 - Matemática nos salários", url: "fichas/MatematicaNasEleicoes/MatematicaNosSalarios.pdf" },
+            { nome: "Ficha 2 - Matemática na poupança e no crédito", url: "fichas/MatematicaNasEleicoes/MatemáticaNaPoupancaENoCredito.pdf" },
+            { nome: "Ficha 3 -Modelos matemáticos em finanças - geral ", url: "fichas/MatematicaNasEleicoes/modelosFinanceirosGeral.pdf" },
+
+          ], testes: [] },
+
+"Testes": { fichas: [
+            { nome: "Teste 1", url: "fichas/MatematicaNasEleicoes/teste1_MatematicaNasEleicoes.pdf" },
+          ], Solucoes: [] },
+        }
+      },
+      "Estatística": {
+        descricao: "Problema estatístico, amostragem e análise de dados.",
+        subtopicos: {
+          "Problema estatístico, População e amostra": { fichas: [
+          { nome: "Ficha 1 -Problema Estatistico, Populacao, Amostra e Variavel", url: "fichas/estatistica/ProblemaEstatisticoPopulacaoAmostraVariavel.pdf" },
+
+            
+          ], testes: [] },
+          "Dados univariados": { fichas: [
+            { nome: "Ficha 1 - Dados Qualitativos E Dados Quantitativos Discretos", url: "fichas/estatistica/DadosQualitativosEDadosQuantitativosDiscretos.pdf" },
+            { nome: "Ficha 2 - Dados Quantitativos Continuos", url: "fichas/estatistica/DadosQuantitativosContinuos.pdf" },
+            { nome: "Ficha 3 - Medidas De Localizacao", url: "fichas/estatistica/MedidasDeLocalizacao.pdf" },
+            { nome: "Ficha 4 - Medidas De Dispersão", url: "fichas/estatistica/MedidasDeDispersao.pdf" },
+
+          ], testes: [] },
+          "Dados bivariados": { fichas: [
+            { nome: "Ficha 1 - DadosBivariados - Diagrama De Dispersao", url: "fichas/estatistica/DadosBivariados_DiagramaDeDispersao.pdf" },
+            { nome: "Ficha 2 - Coeficiente de Correlacao Linear e Reta De Regressao", url: "fichas/estatistica/CoeficienteCorrelacaoLinear_RetaDeRegressao.pdf" },
+
+            
+            
+          ], testes: [] },
+          "Testes": { fichas: [
+            { nome: "teste1 - Estatistica", url: "fichas/estatistica/teste1_Estatistica.pdf" },
+
+
+            
+          ], testes: [] }
+        }
+      },
+      "Geometria sintética no plano": {
+        descricao: "Estudo de pontos notáveis, retas e circunferências no triângulo.",
+        subtopicos: {
+          "Pontos notáveis do triângulo": { fichas: [], testes: [] },
+          "Reta de Euler": { fichas: [], testes: [] },
+          "Circunferência dos 9 pontos": { fichas: [], testes: [] }
+        }
+      },
+      "Funções": {
+        descricao: "Generalidades, polinómios e funções definidas por ramos.",
+        subtopicos: {
+          "Generalidades acerca de funções": { fichas: [], testes: [] },
+          "Funções polinomiais de grau não superior a 2": { fichas: [], testes: [] },
+          "Funções definidas por ramos": { fichas: [], testes: [] }
+        }
+      },
+      "Geometria analítica no plano e no espaço": {
+        descricao: "Vetores e representações analíticas.",
+        subtopicos: {
+          "Geometria analítica no plano": { fichas: [], testes: [] },
+          "Geometria analítica no espaço": { fichas: [], testes: [] },
+          "Vetores no plano e no espaço": { fichas: [], testes: [] }
+        }
+      }
+
+      
+    };
+
+    const overlay = document.getElementById('overlay');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalContent = document.getElementById('modalContent');
+    const crumbs = document.getElementById('crumbs');
+    const btnClose = document.getElementById('btnClose');
+    const btnBack = document.getElementById('btnBack');
+
+    let state = { subject:null, subtopic:null, category:null };
+
+    document.querySelectorAll('[data-subject]').forEach(card=>{
+      card.addEventListener('click', ()=> openSubject(card.dataset.subject));
+    });
+
+    function openSubject(subject){
+      const data = DATA[subject];
+      if(!data) return;
+      state = {subject, subtopic:null, category:null};
+      modalTitle.textContent = subject;
+      modalDesc.textContent = data.descricao || "";
+      crumbs.innerHTML = `<b>${subject}</b>`;
+      btnBack.disabled = true;
+      renderSubtopics(subject);
+      overlay.classList.add('open');
+    }
+
+    function renderSubtopics(subject){
+      const subs = Object.keys(DATA[subject].subtopicos || {});
+      modalContent.innerHTML = `<div class="grid">
+        ${subs.map(s=> cardHTML('📚', s, 'Abrir tópico')).join('')}
+      </div>`;
+      modalContent.querySelectorAll('.card').forEach((el,i)=>{
+        el.addEventListener('click', ()=>{
+          state.subtopic = subs[i];
+          crumbs.innerHTML = `<b>${state.subject}</b> ▸ ${state.subtopic}`;
+          btnBack.disabled = false;
+          renderCategories();
+        });
+      });
+    }
+
+    function renderCategories(){
+      const cats = [
+        {key:'fichas', icon:'📄', label:'Fichas'},
+       // {key:'testes', icon:'📝', label:'Testes'},
+        {key:'solucoes', icon:'📝', label:'Soluções'}
+
+      ];
+      modalContent.innerHTML = `<div class="grid">
+        ${cats.map(c=> cardHTML(c.icon,c.label,'Ver recursos',c.key)).join('')}
+      </div>`;
+      modalContent.querySelectorAll('.card').forEach(card=>{
+        card.addEventListener('click', ()=>{
+          state.category = card.dataset.key;
+          crumbs.innerHTML = `<b>${state.subject}</b> ▸ ${state.subtopic} ▸ ${state.category}`;
+          renderItems();
+        });
+      });
+    }
+
+    function renderItems(){
+      const items = (((DATA[state.subject]||{}).subtopicos||{})[state.subtopic]||{})[state.category] || [];
+      modalContent.innerHTML = `
+        <div class="backline"><button class="btn" onclick="renderCategories()">⬅ Voltar</button></div>
+        <div class="list">
+          ${items.length===0 ? "<p>Sem recursos ainda.</p>" : 
+            items.map(it=>`<div class="item"><a href="${it.url}" target="_blank">${it.nome}</a></div>`).join('')}
+        </div>`;
+    }
+
+    function cardHTML(icon,title,subtitle,key=null){
+      return `<div class="card"${key?` data-key="${key}"`:''}>
+        <div style="font-size:1.4rem">${icon}</div>
+        <div><h3>${title}</h3><p>${subtitle||''}</p></div>
+      </div>`;
+    }
+
+    btnClose.addEventListener('click', ()=> overlay.classList.remove('open'));
+    btnBack.addEventListener('click', ()=>{
+      if(state.category){ state.category=null; renderCategories(); crumbs.innerHTML=`<b>${state.subject}</b> ▸ ${state.subtopic}`; return; }
+      if(state.subtopic){ state.subtopic=null; renderSubtopics(state.subject); crumbs.innerHTML=`<b>${state.subject}</b>`; btnBack.disabled=true; return; }
+    });
+  </script>
+</body>
+</html>
